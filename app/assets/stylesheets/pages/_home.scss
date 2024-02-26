@@ -1,1 +1,26 @@
 // Specific CSS for your home-page
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+}
+
+hr {
+  border: solid #928c8c;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 10px 0 5px;
+  height: 0;
+}
+
+.custom-link {
+  color: rgb(214, 28, 133);
+  text-decoration: none;
+  font-size: 1rem;
+  display: inline-flex;
+}

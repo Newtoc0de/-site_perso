@@ -1,2 +1,44 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container mt-3">
+  <div class="container">
+    <h1>Clothilde Drouet </h1>
+    <h1>Développeuse web Ruby on Rails, HTML, CSS...</h1>
+  </div>
+  <hr>
+    <h2> Pour un site web simple et efficace </h2>
+  <div class="container mt-3">
+      <h3 id="top"> Localisation et disponibilité </h3>
+        <ul>
+        <li> Localisation : Annecy (Haute-Savoie) </li>
+        <br>
+        <li> Disponibilité : 3 jours par semaine </li>
+        </ul>
+  </div>
+  <div class="container mt-3">
+      <h3 id="top"> Prestations </h3>
+        <ul>
+          <li> Développement web fullstack : </li>
+           <p> Création de site web sur Ruby on Rails avec HTML, CSS, Bootstrap et PostGreSQL</p>
+          <li> Création de site web vitrine : </li>
+            <p> Création de site web vitrine pour présenter votre activité</p>
+          <li> Référencement naturel : </li>
+            <p> Optimisation du référencement naturel de votre site web en respectant les bonnes pratiques en back-office </p>
+          <li> Rédaction SEO : </li>
+            <p>Création de contenu écrit optimisé pour le référencement web</p>
+          <li> Mes réalisations : </li>
+            <p> <a href="https://www.parkbuddies.ch/" class="custom-link">Park Buddies </a> l'application qui met en lien les parents pour qu'ils ne s'ennuient plus jamais quand ils emmènent leur(s) enfant(s) au parc! </p>
+        </ul>
+  </div>
+
+  <div class="container mb-3">
+      <div div data-controller="toggle" class="mt-3">
+        <div data-toggle-target="form" class="d-none">
+         <%= render "shared/form" %>
+      </div>
+    <button data-toggle-target="button" class="btn" data-action="click->toggle#fire" id="end"> Contactez-moi !</button>
+      </div>
+
+ </div>
+
+    <hr>
+  </div>
+</div>
