@@ -1,0 +1,6 @@
+.custom-rounded {
+  border-radius: 10px;
+  &::-webkit-input-placeholder { /* Pour Chrome/Opera/Safari */
+    color: #999; /* Couleur de la typo du placeholder */
+  }
+}

@@ -4,18 +4,18 @@
       <%= form_with model: @contact, local: true do |form| %>
         <div class="mb-3">
           <%= form.label :name, "Nom" %>
-          <%= form.text_field :name, class: "form-control" %>
+          <%= form.text_field :name, class: "form-control custom-rounded" %>
         </div>
         <div class="mb-3">
           <%= form.label :email, "Email" %>
-          <%= form.email_field :email, class: "form-control" %>
+          <%= form.email_field :email, placeholder:"votreemail@email.com", class: "form-control custom-rounded" %>
         </div>
         <div class="mb-3">
           <%= form.label :message, "Message" %>
-          <%= form.text_area :message, class: "form-control" %>
+          <%= form.text_area :message, placeholder:"Décrivez votre super projet de site web ou votre besoin" ,class: "form-control custom-rounded" %>
         </div>
         <div class="mb-3">
-          <%= form.submit "Envoyer", class: "btn btn-success" %>
+          <%= form.submit "Envoyer", class: "btn btn-success rounded-pill" %>
         </div>
       <% end %>
     </div>

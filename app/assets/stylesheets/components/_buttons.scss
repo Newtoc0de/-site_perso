@@ -1,0 +1,14 @@
+[data-toggle-target="button"] {
+  background-color: #ff8a00;
+  border: 2px solid transparent;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+[data-toggle-target="button"]:hover{
+  border-color: #da1b60;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
