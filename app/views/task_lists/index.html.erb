@@ -1,5 +1,23 @@
 <div class="container">
   <div class="content">
-  <h1> Voir toutes mes listes de tâches </h1>
+<% if @task_lists.empty? %>
+   <h2> Créez une liste de tâches puis les tâches qui s'y rapportent </h2><!-- Si aucune task_list n'existe, afficher le formulaire de création -->
+  <%= render 'new_task_list_form' %>
+
+<% else %>
+  <!-- Si des task_lists existent, les afficher -->
+  <h2>Listes de tâches existantes :</h2>
+  <ul>
+    <% @task_lists.each do |task_list| %>
+      <li><%= task_list.name %></li>
+    <% end %>
+  </ul>
+  <!-- Lien pour créer une nouvelle task_list -->
+<p> Vous souhaitez ajouter une liste supplémentaire ? </p>
+   <%= render 'new_task_list_form' %>
+<% end %>
+
+
+    <hr>
   </div>
 </div>

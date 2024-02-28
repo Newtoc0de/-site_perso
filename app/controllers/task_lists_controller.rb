@@ -20,6 +20,6 @@ class TaskListsController < ApplicationController
   private
 
   def task_list_params
-    params.require(:task_list).permit(:user_id)
+    params.require(:task_list).permit(:user_id, :name)
   end
 end
