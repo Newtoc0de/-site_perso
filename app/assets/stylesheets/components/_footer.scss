@@ -5,8 +5,12 @@
   justify-content: space-between;
   height: 100px;
   padding: 0px 50px;
+  position: fixed;
+  bottom: 0;
   color: rgba(0,0,0,0.3);
+  margin-top: auto;
 }
+
 .footer-links {
   display: flex;
   align-items: center;
@@ -24,3 +28,4 @@
 .footer .fa-heart {
   color: #D23333;
 }
+
