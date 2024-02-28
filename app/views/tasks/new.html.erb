@@ -1,0 +1,21 @@
+<div class="container">
+  <%= simple_form_for [@task_list, Task.new]  do |f| %>
+    <div class="field mt-3">
+      <%= f.label :titre, "Nom de la tâche", class: "form-control custom-rounded", style: "text-align: center;", id:"form-control-color" %>
+      <div class="field mt-3 mb-3">
+        <%= f.text_field :titre, class: "form-control custom-rounded" %>
+      </div>
+      <%= f.label :détails, class: "form-control custom-rounded", style: "text-align: center;", id:"form-control-color" %>
+      </div>
+      <div class="field mt-3 mb-3">
+      <%= f.text_area :détails, class: "form-control custom-rounded" %>
+    </div>
+    <div class="field mt-3">
+      <%= f.check_box :completed, class: "form-check-input" %>
+    </div>
+    <div class="field mt-3">
+      <%= f.label :completed, class: "form-check-label" %>
+    </div>
+    <%= f.submit "Créer la tâche", class: "btn btn-success rounded-pill mt-3" %>
+  <% end %>
+</div>

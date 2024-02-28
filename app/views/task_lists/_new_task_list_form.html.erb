@@ -2,7 +2,7 @@
   <div class="container mt-3">
   <%= simple_form_for TaskList.new do |f| %>
   <div class="field mt-3">
-  <%= f.label :name, "Nom de la liste de tâches", class:"form-control custom-rounded", style: "text-align: center;" %>
+  <%= f.label :name, "Nom de la liste de tâches", class:"form-control custom-rounded", style: "text-align: center;", id:"form-control-color" %>
    <div class="field mt-3 mb-3">
   <%= f.text_field :name, class:"form-control custom-rounded" %>
   </div>

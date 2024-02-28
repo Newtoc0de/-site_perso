@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   # Can be used by load balancers and uptime monitors to verify that the app is live.
   get "up" => "rails/health#show", as: :rails_health_check
   resources :task_lists, only: [:index, :show, :create, :update, :destroy] do
-    resources :tasks, only: [:index, :show, :create, :update, :destroy]
+    resources :tasks, only: [:index, :show, :new, :create, :update, :destroy]
   end
 
   # Defines the root path route ("/")

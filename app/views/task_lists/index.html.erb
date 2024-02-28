@@ -9,15 +9,14 @@
   <h2>Listes de tâches existantes :</h2>
   <ul>
     <% @task_lists.each do |task_list| %>
-      <li><%= task_list.name %></li>
+      <li class="custom-li"><%= link_to task_list.name, new_task_list_task_path(task_list_id: task_list.id) %></li>
     <% end %>
   </ul>
-  <!-- Lien pour créer une nouvelle task_list -->
-<p> Vous souhaitez ajouter une liste supplémentaire ? </p>
+  <div class="container">
+    <p> Vous souhaitez ajouter une liste supplémentaire ? </p>
    <%= render 'new_task_list_form' %>
+  </div>
 <% end %>
-
-
     <hr>
   </div>
 </div>
