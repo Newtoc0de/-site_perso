@@ -7,6 +7,7 @@
 <% else %>
   <!-- Si des task_lists existent, les afficher -->
   <h2>Listes de tâches existantes :</h2>
+  <p> Cliquez sur la liste pour créer les tâches qui s'y rapportent </p>
   <ul>
     <% @task_lists.each do |task_list| %>
       <li class="custom-li"><%= link_to task_list.name, new_task_list_task_path(task_list_id: task_list.id) %></li>

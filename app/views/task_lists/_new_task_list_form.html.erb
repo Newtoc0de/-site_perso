@@ -2,11 +2,11 @@
   <div class="container mt-3">
   <%= simple_form_for TaskList.new do |f| %>
   <div class="field mt-3">
-  <%= f.label :name, "Nom de la liste de tâches", class:"form-control custom-rounded", style: "text-align: center;", id:"form-control-color" %>
+  <%= f.label :name, "Nom de la liste", class:"form-control custom-rounded", style: "text-align: center;", id:"form-control-color" %>
    <div class="field mt-3 mb-3">
   <%= f.text_field :name, class:"form-control custom-rounded" %>
   </div>
-  <%= f.submit "Créer la liste de tâches", class: "btn btn-success rounded-pill mt-3" %>
+  <%= f.submit "Créer votre liste", class: "btn btn-success rounded-pill mt-3" %>
 <% end %>
   </div>
 </div>

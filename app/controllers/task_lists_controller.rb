@@ -17,6 +17,10 @@ class TaskListsController < ApplicationController
     end
   end
 
+  def show
+    @task_list = TaskList.find(params[:id])
+  end
+
   private
 
   def task_list_params

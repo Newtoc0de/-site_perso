@@ -1,0 +1,12 @@
+<div class="container">
+  <h2> Voici votre liste et toutes les tâches qui vont avec ! </h2>
+  <div class="container">
+    <h3> <%= @task_list.name %> </h3>
+    <ul>
+      <% @task_list.tasks.each do |task| %>
+        <li><%= task.titre %></li>
+        <p> <%= task.détails %></p>
+      <% end %>
+    </ul>
+
+</div>
