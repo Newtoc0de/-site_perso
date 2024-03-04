@@ -16,6 +16,22 @@ class TasksController < ApplicationController
     end
   end
 
+  def destroy
+    @task = Task.find(params[:id])
+    @task_list = @task.task_list
+    logger.debug
+    if @task.destroy
+      redirect_to @task_list, notice: 'La tâche a été supprimée avec succès.'
+    else
+      redirect_to @task_list, alert: 'Une erreur s\'est produite lors de la suppression de la tâche.'
+    end
+  end
+
+  def index
+    @task_list = TaskList.find(params[:task_list_id])
+    @tasks = @task_list.tasks
+  end
+
   private
 
   def task_params

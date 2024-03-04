@@ -5,7 +5,15 @@
     <ul>
       <% @task_list.tasks.each do |task| %>
         <li><%= task.titre %></li>
-        <p> <%= task.détails %></p>
+        <div class="well"> <%= task.détails %></div>
+        <% if task.completed %>
+          <i class="fas fa-check-square"></i> C'est fait
+        <% else %>
+          <i class="far fa-square"></i> C'est encore à faire
+        <% end %>
+        <%= link_to task_list_task_path(@task_list, task), method: :delete, data: { turbo_confirm: "Delete #{task.titre}?" } do %>
+           <i class="fa-regular fa-trash-can"></i>
+          <% end %>
       <% end %>
     </ul>
 
