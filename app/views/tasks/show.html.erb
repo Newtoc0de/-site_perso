@@ -1,0 +1,14 @@
+<div class="container">
+  <h2> Voici la tache </h2>
+  <div class="container">
+    <h3> <%= @task.titre %> </h3>
+    <div class="well"> <%= @task.détails %></div>
+    <% if @task.completed %>
+      <i class="fas fa-check-square"></i> C'est fait
+    <% else %>
+      <i class="far fa-square"></i> C'est encore à faire
+       <% end %>
+    <%= link_to "Supprimer la tâche", task_list_task_path(@task.task_list, @task), method: :delete, data: { confirm: "Êtes-vous sûr de vouloir supprimer cette tâche ?" } %>
+  </div>
+    <%= link_to "Retour à la liste", task_list_path(@task.task_list) %>
+</div>
