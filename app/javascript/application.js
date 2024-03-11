@@ -1,5 +1,11 @@
 // Configure your import map in config/importmap.rb. Read more: https://github.com/rails/importmap-rails
 import "@hotwired/turbo-rails"
 import "controllers"
-import "@popperjs/core"
+import "stylesheets/application"
 import "bootstrap"
+import "@popperjs/core"
+import "bootstrap-icons/font/bootstrap-icons.css"
+import "bootstrap/dist/css/bootstrap"
+import "bootstrap/dist/js/bootstrap"
+import "bootstrap-icons/font/bootstrap-icons.css"
+import "bootstrap-icons/font/bootstrap-icons.woff"

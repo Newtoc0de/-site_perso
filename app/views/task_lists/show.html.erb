@@ -1,20 +1,21 @@
 <div class="container">
-  <h2> Voici votre liste et toutes les tâches qui vont avec ! </h2>
-  <div class="container">
-    <h3> <%= @task_list.name %> </h3>
-    <ul>
-      <% @task_list.tasks.each do |task| %>
-        <li><%= task.titre %></li>
-        <div class="well"> <%= task.détails %></div>
-        <% if task.completed %>
-          <i class="fas fa-check-square"></i> C'est fait
-        <% else %>
-          <i class="far fa-square"></i> C'est encore à faire
-        <% end %>
-        <%= link_to task_list_task_path(@task_list, task), method: :delete, data: { turbo_confirm: "Delete #{task.titre}?" } do %>
-           <i class="fa-regular fa-trash-can"></i>
-          <% end %>
+  <% if @lists.present? %>
+    <div class="row">
+      <% @lists.each do |list| %>
+        <div class="col-md-4 mb-3">
+          <div class="card">
+            <div class="card-body text-center">
+              <h5 class="card-title"><%= list.title %></h5>
+              <!-- Ajouter l'icône "poubelle" avec un lien pour supprimer la liste -->
+              <%= link_to "Destroy", list_path(list), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %></td>
+                <i class="far fa-trash-alt"></i>
+              <% end %>
+            </div>
+          </div>
+        </div>
       <% end %>
-    </ul>
-
+    </div>
+  <% else %>
+    <%= render "shared/form" %>
+  <% end %>
 </div>

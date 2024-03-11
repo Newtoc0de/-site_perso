@@ -21,6 +21,15 @@ class TaskListsController < ApplicationController
     @task_list = TaskList.find(params[:id])
   end
 
+  def destroy
+    @task_list = TaskList.find(params[:id])
+    if @task_list.destroy
+      redirect_to task_lists_path, notice: "La liste a été supprimée avec succès."
+    else
+      redirect_to @task_list, alert: "Une erreur s'est produite lors de la suppression de la liste."
+    end
+  end
+
   private
 
   def task_list_params
