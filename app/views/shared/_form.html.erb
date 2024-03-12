@@ -1,21 +1,21 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6 offset-md-3">
-      <%= form_with model: @contact, local: true do |form| %>
+     <%= simple_form_for @contact, url: contacts_path do |f| %>
         <div class="mb-3">
-          <%= form.label :name, "Nom" %>
-          <%= form.text_field :name, class: "form-control custom-rounded" %>
+          <%= f.label :name, "Nom" %>
+          <%= f.text_field :name, class: "form-control custom-rounded" %>
         </div>
         <div class="mb-3">
-          <%= form.label :email, "Email" %>
-          <%= form.email_field :email, placeholder:"votreemail@email.com", class: "form-control custom-rounded" %>
+          <%= f.label :email, "Email" %>
+          <%= f.email_field :email, placeholder:"votreemail@email.com", class: "form-control custom-rounded" %>
         </div>
         <div class="mb-3">
-          <%= form.label :message, "Message" %>
-          <%= form.text_area :message, placeholder:"Décrivez votre super projet de site web ou votre besoin" ,class: "form-control custom-rounded" %>
+          <%= f.label :message, "Message" %>
+          <%= f.text_area :message, placeholder:"Décrivez votre super projet de site web ou votre besoin" ,class: "form-control custom-rounded" %>
         </div>
         <div class="mb-3">
-          <%= form.submit "Envoyer", class: "btn btn-success rounded-pill" %>
+          <%= f.submit "Envoyer", class: "btn btn-success rounded-pill" %>
         </div>
       <% end %>
     </div>

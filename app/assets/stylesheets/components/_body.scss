@@ -2,7 +2,8 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* Prend toute la hauteur de la fenêtre du navigateur */
-  margin: 0; /* Supprimer les marges par défaut du corps */
+  margin: 0;
+  padding-bottom: 100px; /* Supprimer les marges par défaut du corps */
 }
 
 /* Styles pour le contenu principal (ex: votre contenu de page) */

@@ -1,1 +1,14 @@
-<%= render "shared/form" %>
+<%= form_with(model: @contact, url: new_contact_url, local: true) do |form| %>
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.email_field :email %>
+  </div>
+  <!-- Autres champs du formulaire ici -->
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

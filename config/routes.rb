@@ -10,6 +10,5 @@ Rails.application.routes.draw do
     resources :tasks
   end
 
-  resources :contacts 
+  resources :contacts
 end
-  #root "posts#index"

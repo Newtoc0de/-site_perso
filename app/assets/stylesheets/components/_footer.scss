@@ -3,11 +3,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100px;
-  bottom: 0;
-  width: 100%;
-  color: rgba(0,0,0,0.3);
-  margin-top: auto;
+  height:  10%;
+  padding: 0px 50px;
+  color: black;
+  position: fixed; /* Ajout de la propriété position: fixed; */
+  bottom: 0; /* Positionner le footer en bas de la fenêtre du navigateur */
+  width: 90%;
 }
 
 .footer-links {
