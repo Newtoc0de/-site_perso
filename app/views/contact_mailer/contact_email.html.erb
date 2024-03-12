@@ -1,14 +1,18 @@
-<%= form_with(model: @contact, url: new_contact_url, local: true) do |form| %>
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.email_field :email %>
-  </div>
-  <!-- Autres champs du formulaire ici -->
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+<div class="email-container">
+  <h2 class="email-title">Vous avez reçu une nouvelle demande de contact</h2>
+  <%= simple_form_for @contact, url: contacts_url do |f| %>
+    <div class="mt-3 label-input-container">
+      <%= f.label :name, "Nom" %>
+      <%= f.text_field :name, class: "form-control custom-input custom-rounded" %>
+    </div>
+    <div class="mt-3 label-input-container">
+      <%= f.label :email, "Email" %>
+      <%= f.email_field :email, class: "form-control custom-input custom-rounded" %>
+    </div>
+    <!-- Autres champs du formulaire ici -->
+    <div class="mt-3 label-input-container">
+      <%= f.label :message, "Message" %>
+      <%= f.text_area :message, class: "form-control custom-input custom-rounded" %>
+    </div>
+  <% end %>
+</div>
