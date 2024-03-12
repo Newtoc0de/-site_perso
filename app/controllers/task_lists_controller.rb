@@ -13,7 +13,7 @@ class TaskListsController < ApplicationController
     if @task_list.save
       redirect_to task_list_path(@task_list)
     else
-      render :new
+      render :new, alert: "Une erreur s'est produite lors de la création de la liste."
     end
   end
 
